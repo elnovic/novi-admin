@@ -10,7 +10,7 @@ export default function AdminUtilisateurs() {
 
   useEffect(() => {
     supabase.from('utilisateurs').select('*').order('created_at', { ascending: false })
-      .then(({ data }) => { setUtilisateurs(data || []); setChargement(false) })
+      .then(({ data }: { data: any }) => { setUtilisateurs(data || []); setChargement(false) })
   }, [])
 
   const toggleAdmin = async (id: string, roleActuel: string) => {
