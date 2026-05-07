@@ -13,7 +13,7 @@ export default function AdminUtilisateurs() {
       .from('utilisateurs')
       .select('*')
       .order('created_at', { ascending: false })
-      .then((result: any) => {
+      .then((result: { data: any[] | null }) => {
         setUtilisateurs(result.data || [])
         setChargement(false)
       })
