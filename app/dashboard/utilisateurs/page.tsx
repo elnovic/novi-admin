@@ -9,8 +9,14 @@ export default function AdminUtilisateurs() {
   const [recherche, setRecherche] = useState('')
 
   useEffect(() => {
-    supabase.from('utilisateurs').select('*').order('created_at', { ascending: false })
-      .then(({ data }: { data: any }) => { setUtilisateurs(data || []); setChargement(false) })
+    supabase
+      .from('utilisateurs')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .then((result: any) => {
+        setUtilisateurs(result.data || [])
+        setChargement(false)
+      })
   }, [])
 
   const toggleAdmin = async (id: string, roleActuel: string) => {
