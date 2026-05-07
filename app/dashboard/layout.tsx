@@ -13,6 +13,7 @@ const menu = [
   { href: '/dashboard/admins', label: 'Administrateurs', icon: '◈' },
   { href: '/dashboard/publications', label: 'Publications', icon: '◧' },
   { href: '/dashboard/opportunites', label: 'Opportunités', icon: '◈' },
+  { href: '/dashboard/signalements', label: 'Signalements', icon: '⚠️' },
 ]
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -96,7 +97,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="px-3 py-4 border-t border-gray-800">
           <div className="flex items-center gap-3 px-3 py-2 mb-1">
             <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-white text-xs font-bold">{admin.prenom?.[0]}{admin.nom?.[0]}</span>
+              <span className="text-white text-xs font-bold">
+                {admin.prenom?.[0]}{admin.nom?.[0]}
+              </span>
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-white text-xs font-medium truncate">{admin.prenom} {admin.nom}</p>
@@ -113,6 +116,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
       {/* Contenu principal */}
       <main className="flex-1 ml-60 min-h-screen">
+
         {/* Topbar */}
         <div className="bg-white border-b border-gray-100 px-8 py-4 flex items-center justify-between sticky top-0 z-30">
           <div className="flex items-center gap-2 text-sm text-gray-400">
