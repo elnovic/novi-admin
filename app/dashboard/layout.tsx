@@ -7,12 +7,13 @@ import { getAdminConnecte, deconnecterAdmin } from '@/lib/supabase'
 
 const menu = [
   { href: '/dashboard', label: 'Vue d\'ensemble', icon: '▣' },
-  { href: '/dashboard/cours', label: 'Cours', icon: '◈' },
-  { href: '/dashboard/cours/generer', label: 'Générer avec l\'IA', icon: '⬡' },
-  { href: '/dashboard/utilisateurs', label: 'Utilisateurs', icon: '◉' },
-  { href: '/dashboard/admins', label: 'Administrateurs', icon: '◈' },
-  { href: '/dashboard/publications', label: 'Publications', icon: '◧' },
-  { href: '/dashboard/opportunites', label: 'Opportunités', icon: '◈' },
+  { href: '/dashboard/cours', label: 'Cours', icon: '📚' },
+  { href: '/dashboard/cours/generer', label: 'Générer avec l\'IA', icon: '🤖' },
+  { href: '/dashboard/cours/ajouter', label: 'Ajouter manuellement', icon: '✏️' },
+  { href: '/dashboard/utilisateurs', label: 'Utilisateurs', icon: '👥' },
+  { href: '/dashboard/admins', label: 'Administrateurs', icon: '🔐' },
+  { href: '/dashboard/publications', label: 'Publications', icon: '📄' },
+  { href: '/dashboard/opportunites', label: 'Opportunités', icon: '💼' },
   { href: '/dashboard/signalements', label: 'Signalements', icon: '⚠️' },
 ]
 
